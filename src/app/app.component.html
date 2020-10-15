@@ -1,4 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<app-new-cmp (onUpdateTitle)="title = $event" [title]="title"></app-new-cmp>
+
+<h1>
+  Parent {{title}}
+</h1>
+
+<br><br>
+
+<button (click)="changeTitle()">Change title</button>
+
+<router-outlet></router-outlet>
